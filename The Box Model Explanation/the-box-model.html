@@ -1,0 +1,55 @@
+<!-- 
+    In CSS, the term "box model" is used when talking about design and layout.
+
+    The CSS box model is essentially a box that wraps around every HTML element.
+    It consists of: margins, borders, padding, and the actual content
+ -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="defaults.css">
+        <title>The Box Model Example</title>
+
+        <style>
+            *:not(html, body) {
+                /* outline: 10px solid orange;  */
+            }
+            /* 
+                It is important to understand that margins,
+                padding, and borders will eat at the dimensions
+                of your content, modifying its overall size.
+
+                Applying these to the container doesn't affect the
+                content dimensions.
+            */
+            div {
+                background-color: gainsboro;
+                margin: 40px;
+                border: 20px solid darkred;
+                padding: 30px;
+            }
+
+            /* 
+                Applying these to the actual content affects the overall
+                content dimensions and reduces the available space.
+            */
+            p {
+                background-color: white;
+                width: 200px;
+                height: 200px;
+                padding: 20px;
+                margin: 20px;
+                border: 10px solid #1a69af;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div>
+            <p>content</p>
+        </div>
+    </body>
+</html>
